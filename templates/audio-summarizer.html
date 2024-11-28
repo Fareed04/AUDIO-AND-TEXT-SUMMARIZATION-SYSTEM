@@ -1,0 +1,77 @@
+{% extends "index.html" %}
+{% block content %}
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Audio Summarizer</h1>
+                </div>
+                <div class="col-12">
+                    <form action="/audio-summ" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <input class="form-control" type="file" name="file" id="">
+                        </div>
+<!--                        <div class="mb-3">-->
+<!--                            <div class="btn-group btn-group-toggle" data-toggle="buttons">-->
+<!--                                <label class="btn btn-secondary active">-->
+<!--                                    <input class="btn-check" type="radio" name="short" id="shortt" autocomplete="off" checked value="short"> Short-->
+<!--                                </label>-->
+<!--                                <label class="btn btn-secondary">-->
+<!--                                    <input class="btn-check" type="radio" name="short" id="medium" autocomplete="off" value="medium"> Medium-->
+<!--                                </label>-->
+<!--                                <label class="btn btn-secondary">-->
+<!--                                    <input class="btn-check" type="radio" name="short" id="long" autocomplete="off" value="long"> Long-->
+<!--                                </label>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                <div class="form-group mb-3">
+                  <label class="form-label">Summary length:</label>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="shortt" autocomplete="off" value="short" checked>
+                      Short
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="medium" autocomplete="off" value="medium">
+                      Medium
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="long" autocomplete="off" value="long">
+                      Long
+                    </label>
+                  </div>
+                </div>
+<!--                        <div class="mb-3">-->
+<!--                            <div class="btn-group btn-group-toggle" data-toggle="buttons">-->
+<!--                                <label class="btn btn-success active">-->
+<!--                                    <input class="btn-check" type="radio" name="sumtype" id="ext" autocomplete="off" checked value="extractive"> Extractive-->
+<!--                                </label>-->
+<!--                                <label class="btn btn-success">-->
+<!--                                    <input class="btn-check" type="radio" name="sumtype" id="abs" autocomplete="off" value="abstractive"> Abstractive-->
+<!--                                </label>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                <div class="form-group mb-3">
+                  <label class="form-label">Summary type:</label>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success">
+                      <input type="radio" name="sumtype" id="ext" autocomplete="off" checked value="extractive">
+                      Extractive
+                    </label>
+                    <label class="btn btn-success">
+                      <input type="radio" name="sumtype" id="abs" autocomplete="off" value="abstractive">
+                      Abstractive
+                    </label>
+                  </div>
+                </div>
+<!--                        <div class="text-center">-->
+<!--                            <button type="submit" class="btn btn-primary">Get Summary</button>-->
+<!--                        </div>-->
+                        <button type="submit" class="btn btn-primary btn-block my-3">Get Summary</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+

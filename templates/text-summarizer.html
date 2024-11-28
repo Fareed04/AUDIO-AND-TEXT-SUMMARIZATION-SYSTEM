@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% block content %}
+        <section class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h1 class="text-center my-4">Text Summarizer</h1>
+              <form action="/text-summ" method="POST" class="needs-validation">
+                <div class="form-group">
+                  <label for="textarea_name">Enter text:</label>
+                  <textarea class="form-control" name="textarea_name" id="textarea_name" cols="100" rows="8" required></textarea>
+                  <div class="invalid-feedback">Please enter the text you want to summarize.</div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label class="form-label">Summary length:</label>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="shortt" autocomplete="off" value="short" checked>
+                      Short
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="medium" autocomplete="off" value="medium">
+                      Medium
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="short" id="long" autocomplete="off" value="long">
+                      Long
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label class="form-label">Summary type:</label>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success">
+                      <input type="radio" name="sumtype" id="ext" autocomplete="off" checked value="extractive">
+                      Extractive
+                    </label>
+                    <label class="btn btn-success">
+                      <input type="radio" name="sumtype" id="abs" autocomplete="off" value="abstractive">
+                      Abstractive
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block my-3">Get Summary</button>
+              </form>
+            </div>
+          </div>
+        </section>
+{% endblock %}

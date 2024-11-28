@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'bootstrap.min.css') }}">
+    <title>Audio and Text Summarization System</title>
+</head>
+<body>
+    <video width="100%" autoplay="" muted="" loop="" playsinline="" id="videoBG" poster=".">
+        <source src="../static/video2.mp4" type="video/mp4">
+    </video>
+    <div class="kode-mono page-content">
+            <nav class="navbar navbar-expand-md navbar-light p-4">
+              <a class="navbar-brand mx-2" href="{{ url_for('home_page') }}">𝕾𝖚𝖆𝖒𝖒𝖆𝖗𝖎𝖟𝖊</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="True" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav flex-grow-1 pe-3">
+                  <li class="nav-item mx-lg-4 active"><a href="{{ url_for('home_page') }}" class="nav-link">Home</a></li>
+                  <li class="nav-item mx-lg-4"><a href="{{ url_for('text_summ') }}" class="nav-link">Text Summarizer</a></li>
+                  <li class="nav-item mx-lg-4"><a href="{{ url_for('audio_summ') }}" class="nav-link">Audio Summarizer</a></li>
+                </ul>
+              </div>
+            </nav>
+        {% block content %}
+         <div class="container">
+            <section class="">
+                <img src="../static/text-summary-pic1.jpg" alt="Text summarization picture" class="mod-size-img img-fluid">
+                <div class="col">
+                    <h1>Text Summarization</h1>
+                    <p>Text summarization not only saves time but also enhances comprehension by condensing complex ideas into digestible snippets. Whether you're navigating through extensive articles, research papers, or news updates, this technology enables you to quickly grasp the core concepts, enabling more efficient information absorption. Embrace the future of content consumption by integrating text summarization into your digital experience. Make use of our Text summarizer by typing in the text that you need to be summarized and specifying the type of summary, whether Extractive or Abstractive. After this simply click summarize to get your summary!!</p>
+                    <a href="{{ url_for('text_summ') }}" class="btn btn-primary" style="background-color: #F77D24;">Summarize Text <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </section>
+            <section class="">
+                <img src="../static/audio-summary-pic1.jpeg" alt="Audio summarization picture" class="mod-size-img img-fluid">
+                <div class="col">
+                    <h1>Audio summarization</h1>
+                    <p>Embrace the future of efficient information consumption with audio summarization. Experience the convenience of accessing crucial insights without the time-consuming task of listening to lengthy audio recordings. Elevate your productivity and stay ahead in this fast-paced digital age. Make use of our Audio summarizer by uploading an audio file and getting your summary almost in seconds.</p>
+                    <a href="{{ url_for('audio_summ') }}" class="btn btn-primary" style="background-color: #F77D24;">Summarize Audio <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </section>
+        </div>
+        {% endblock %}
+        <footer class="container-fluid text-center py-4">
+          <h2 class="mb-4">Contact Me</h2>
+          <p>Email: <a href="mailto:ologundudufareedgmail.com" class="text-decoration-none">ologundudufareed@gmail.com</a></p>
+          <p class="mt-4">Phone number: 08032982517</p>
+        </footer>
+    </div>
+</body>
+</html>

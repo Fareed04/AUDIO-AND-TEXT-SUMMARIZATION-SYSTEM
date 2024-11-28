@@ -1,0 +1,121 @@
+body{
+    font-family: "Kode Mono", monospace;
+    font-style: normal;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #E5E1DA;
+}
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+#videoBG{
+    position: fixed;
+    display: block;
+    z-index: -1;
+}
+.page-content{
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+section {
+    margin: 5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    background-color: whitesmoke;
+}
+.section-house{
+    border-radius: 1.5rem;
+    margin: 8rem;
+    border: dashed 0.5rem grey;
+    opacity: 0.9
+}
+footer{
+    background-color: #C6A969;
+    padding: 2.5rem;
+    opacity: 1;
+}
+nav {
+    border-radius: 0rem 0rem 1rem 1rem;
+    background-color: #92C7CF;
+    opacity: 0.9
+}
+.navbar-link{
+    color: #666777;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+.navbar-link:hover, .nav-link:active{
+    color: ###;
+}
+.navbar-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    color: #009970;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: right;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.mod-size-img{
+    width: 30vw;
+    height: 35vh;
+    border-radius: 0.5rem;
+}
+.about-summary{
+    max-width: 500px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.orange-link{
+    background: #F77D24;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Sans-serif;
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    border-radius: 2rem;
+    i{
+      display:inline-block;
+      padding: 1rem;
+    }
+  }
+.orange-btn{
+    font-weight: 600;
+    background: #F77D24;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+@media (max-width: 1420px) {
+  body {
+    font-size: 16px;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);  #videoBG{
+    position: fixed;
+    display: none;
+  }
+}
